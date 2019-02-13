@@ -8,3 +8,14 @@ func Sum(numbers []int) int {
 	}
 	return sum
 }
+
+// SumAll adds each element of multiple slices
+func SumAllTails(numbersToSum ...[]int) []int {
+	var sums []int
+
+	for _, numbers := range numbersToSum {
+		sums = append(sums, Sum(numbers))
+	}
+
+	return sums
+}
